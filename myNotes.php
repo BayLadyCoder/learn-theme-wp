@@ -65,4 +65,17 @@ get_the_id(); // GET... it RETURN the value to us, we have to manually ECHO it w
     Formatting Date and Time
     https://codex.wordpress.org/Formatting_Date_and_Time
  */
+
+/**
+ *  Change archive dynamic sub-title
+ * 1. Author
+ *    Users -> Your Profile -> About Yourself
+ *     -> Biography Info - Add description here
+ * 2. Categories
+ *     Posts -> Categories 
+ *      - Edit Existing Categories - Add Description
+ *      - Add New Category - Add Description
+ *     
+ * 
+ */
 ?>
