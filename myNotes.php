@@ -59,4 +59,10 @@ get_the_id(); // GET... it RETURN the value to us, we have to manually ECHO it w
     -> Display name publicly as - choose the new Nickname
     -> Update
  */
+
+/*
+    get time dynamically using the_time();
+    Formatting Date and Time
+    https://codex.wordpress.org/Formatting_Date_and_Time
+ */
 ?>
