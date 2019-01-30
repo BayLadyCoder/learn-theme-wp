@@ -50,4 +50,13 @@ get_the_id(); // GET... it RETURN the value to us, we have to manually ECHO it w
     - now index.php is the "Blog" page
 
  */
+
+/*
+    change author name (in the Front End)
+    In Wordpress Dash Board
+    Users -> Your Profile -> Name 
+    -> Nickname - change to new Nickname
+    -> Display name publicly as - choose the new Nickname
+    -> Update
+ */
 ?>
