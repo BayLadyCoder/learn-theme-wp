@@ -18,7 +18,16 @@ while(have_posts()){
   </div>
 
   <div class="container container--narrow page-section">
-  breadcrumb box will go here 
+  <!-- Breadcrumbs Box -->
+    <div class="metabox metabox--position-up metabox--with-home-link">
+      <p>
+      <a class="metabox__blog-home-link" href="<?php echo site_url('/blog'); ?>">
+      <i class="fa fa-home" aria-hidden="true"></i> Blog Home</a> 
+      <span class="metabox__main">Posted by <?php the_author_posts_link(); ?> on <?php the_time('M j, Y'); ?> in <?php echo get_the_category_list(', '); //the argument is for separating more than one categories ?></span>
+      </p>
+    </div>
+
+   
   <div class="generic-content"><?php the_content(); ?></div>
 </div>    
     
