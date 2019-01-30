@@ -42,7 +42,7 @@ while(have_posts()){
 
     <!-- Sidebar menu -->
     <div class="page-links">
-      <h2 class="page-links__title"><a href="#">About Us</a></h2>
+      <h2 class="page-links__title"><a href="<?php echo get_permalink($theParentID); ?>"><?php echo get_the_title($theParentID) ?></a></h2>
       <ul class="min-list">
         <?php 
             //wp_list_pages();  --> echo all the links from our website
