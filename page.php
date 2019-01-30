@@ -75,10 +75,14 @@ while(have_posts()){
                 $findChildOf = get_the_ID();
             }
 
+            // by default, Wordpress order the list alphabetically
             wp_list_pages(array(
                 'title_li' => NULL, // remove the text "PAGES"
-                'child_of' => $findChildOf 
-
+                'child_of' => $findChildOf,
+                'sort_column' => 'menu_order' // manually order the menu list, without this line of code it will order alphabetically
+                // after we add this above line of code, we can change the order by 
+                // going to the dashboard and change the order by edit page attribute on each page
+                // value start with 1 (top on list), default is 0
             ));
 
             /*
