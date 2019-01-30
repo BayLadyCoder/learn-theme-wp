@@ -37,8 +37,19 @@ while(have_posts()){
 
     <?php } ?>
 
+        
+    <?php 
+    // Checking to see if it's a parent of any pages/posts (see if it has a child/children)
+    $isParent = get_pages(array(
+        'child_of' => get_the_ID()
+    ));
 
-     
+    // This if statement is for showing this sidebar menu only on the pages that are the parents or children
+    // if the page is independent (not a perent and not a child of any pages)
+    // there will be no sidebar menu on those individual pages
+    
+    // $theParentID returns true if it's a child (has a parent)
+    if($theParentID or $isParent) { ?>
 
     <!-- Sidebar menu -->
     <div class="page-links">
@@ -77,6 +88,8 @@ while(have_posts()){
         ?>
       </ul>
     </div>
+
+    <?php }?>
 
     <div class="generic-content">
         <?php the_content(); ?>
