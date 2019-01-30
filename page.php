@@ -16,6 +16,16 @@ while(have_posts()){
   <div class="container container--narrow page-section">
 
     <!-- Breadcrumbs Box -->
+    <?php 
+    // Only show the breadcrumbs box in the child page (not showing on the parent page ex. About Us page)
+    // Each post/page has its own ID number(see in the url) --> echo get_the_ID();
+    
+    // echo wp_get_post_parent_id(get_the_ID()); --> return parent ID, 
+    // if no parent it will return 0 (0 is false in programming)
+    
+
+    if(wp_get_post_parent_id(get_the_ID())) { ?>
+
     <div class="metabox metabox--position-up metabox--with-home-link">
       <p>
       <a class="metabox__blog-home-link" href="#">
@@ -23,6 +33,10 @@ while(have_posts()){
       <span class="metabox__main"><?php the_title() ?></span>
       </p>
     </div>
+
+    <?php } ?>
+
+
     
 
     <!-- Sidebar menu -->
