@@ -13,6 +13,12 @@ add_action('wp_enqueue_scripts', 'learn_theme_files');
 
 // Add title tag in the browser tab
 function learn_theme_features() {
+    // add dynamic menu bars
+    register_nav_menu('headerMenuLocation', 'Header Menu Location');
+    register_nav_menu('footerLocationOne', 'Footer Location One');
+    register_nav_menu('footerLocationTwo', 'Footer Location Two');
+    
+    // add dynamic title in browser tab for each page
     add_theme_support('title-tag');
 }
 

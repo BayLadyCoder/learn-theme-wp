@@ -12,4 +12,25 @@ get_the_id(); // GET... it RETURN the value to us, we have to manually ECHO it w
 // https://codex.wordpress.org
 // https://developer.wordpress.org
 
+
+
+/* 
+    Adding dynamic menu
+    in functions.php, add this below code in the function learn_theme_features()
+    // *** add dynamic menu bars
+    register_nav_menu('headerMenuLocation', 'Header Menu Location');
+
+    Adjusting menu in WP dashboard
+    Appearance -> Menus -> Create New Menu -> choose pages -> Menu Setting (choose Display Location)
+    *** custom links ***
+
+    in HTML nav tags, add this php code
+     wp_nav_menu(array(
+            'theme_location' => 'headerMenuLocation'
+          ));
+
+    to change the order of the list in the menu
+    Appearance -> Menus -> drag the list in Menu Structure to change the order -> Save Menu
+
+*/
 ?>
