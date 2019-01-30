@@ -23,13 +23,14 @@ while(have_posts()){
     // echo wp_get_post_parent_id(get_the_ID()); --> return parent ID, 
     // if no parent it will return 0 (0 is false in programming)
     
+    $theParentID = wp_get_post_parent_id(get_the_ID());
 
-    if(wp_get_post_parent_id(get_the_ID())) { ?>
+    if($theParentID) { ?>
 
     <div class="metabox metabox--position-up metabox--with-home-link">
       <p>
-      <a class="metabox__blog-home-link" href="#">
-      <i class="fa fa-home" aria-hidden="true"></i> Back to About Us</a> 
+      <a class="metabox__blog-home-link" href="<?php echo get_permalink($theParentID); ?>">
+      <i class="fa fa-home" aria-hidden="true"></i> Back to <?php echo get_the_title($theParentID); ?></a> 
       <span class="metabox__main"><?php the_title() ?></span>
       </p>
     </div>
