@@ -9,7 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); //create dynamic class name in tht body tag depends on what page you are on?>>
     
 <header class="site-header">
     <div class="container">
