@@ -33,4 +33,21 @@ get_the_id(); // GET... it RETURN the value to us, we have to manually ECHO it w
     Appearance -> Menus -> drag the list in Menu Structure to change the order -> Save Menu
 
 */
+
+/*
+    Creating Blog page
+    in WP Dash Board
+    create new page with title "Home" with no content
+    create new page with title "Blog" with no content
+
+    Settings -> Reading -> Front Page Displays 
+    -> choose A Static Page 
+    -> set Front Page to "Home" page
+    -> set Posts Page to "Blog" page
+
+    create a new file's name "front-page.php"
+    - Add all code from index.php (homepage code) to front-page.php
+    - now index.php is the "Blog" page
+
+ */
 ?>
