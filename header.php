@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html <?php 
+    language_attributes(); 
+    //Wordpress automatically add the appropriate language to this tag depends on the language i your website 
+    ?>>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
