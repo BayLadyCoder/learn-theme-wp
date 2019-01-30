@@ -38,16 +38,45 @@ while(have_posts()){
     <?php } ?>
 
 
-    
+     
 
     <!-- Sidebar menu -->
-    <!-- <div class="page-links">
+    <div class="page-links">
       <h2 class="page-links__title"><a href="#">About Us</a></h2>
       <ul class="min-list">
-        <li class="current_page_item"><a href="#">Our History</a></li>
-        <li><a href="#">Our Goals</a></li>
+        <?php 
+            //wp_list_pages();  --> echo all the links from our website
+            // passing arguments to this function must be an associative array (key-value pair)
+             
+            /* Associative Array
+                $animalSounds = array(
+                    'cat' => 'meow',
+                    'dog' => 'bark',
+                    'pig' => 'oink'
+                );
+
+                echo $animalSounds['dog'];
+            */
+            
+            if($theParentID) { // if the page has the parent
+                $findChildOf = $theParentID;
+            } else {
+                $findChildOf = get_the_ID();
+            }
+
+            wp_list_pages(array(
+                'title_li' => NULL, // remove the text "PAGES"
+                'child_of' => $findChildOf 
+
+            ));
+
+            /*
+            'child_of'
+            (int) Display only the sub-pages of a single page by ID. Default 0 (all pages).
+            */
+        ?>
       </ul>
-    </div> -->
+    </div>
 
     <div class="generic-content">
         <?php the_content(); ?>
