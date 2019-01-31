@@ -92,4 +92,17 @@ get_the_id(); // GET... it RETURN the value to us, we have to manually ECHO it w
      * 2. choose a common permalink setting -> Save Changes
      * 3. refresh the page, then it should work
      */
+
+
+    /**
+     *  Manually write/use excerpt
+     * 1. in Dash Board, Posts -> Edit Post -> Excerpt - write your excerpt for that post
+     * 2. add this code in php,
+     *          if(has_excerpt()) {
+     *                 echo get_the_excerpt();
+     *               } else {
+     *                 echo wp_trim_words(get_the_content(), 18);
+     *               }
+     * 
+     */
 ?>
