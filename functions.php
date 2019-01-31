@@ -24,4 +24,6 @@ function learn_theme_features() {
 
 add_action('after_setup_theme', 'learn_theme_features');
 
+
+
 ?>

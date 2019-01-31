@@ -75,7 +75,14 @@ get_the_id(); // GET... it RETURN the value to us, we have to manually ECHO it w
  *     Posts -> Categories 
  *      - Edit Existing Categories - Add Description
  *      - Add New Category - Add Description
- *     
- * 
+ */
+
+
+/*
+    Custom Post Types
+    1. create a new folder name "mu-plugins" inside "wp-content" folder 
+    ( "mu-plugins" comes from MUST USE PLUGINS) 
+    this type will always show in every theme
+    *** Wordpress automatically download this code to any theme we use
  */
 ?>
