@@ -85,4 +85,11 @@ get_the_id(); // GET... it RETURN the value to us, we have to manually ECHO it w
     this type will always show in every theme
     *** Wordpress automatically download this code to any theme we use
  */
+
+    /**
+     * To fix "Page not found" when add a new post type like 'event'
+     * 1. In Wordpress dash board, Settings -> Permalinks
+     * 2. choose a common permalink setting -> Save Changes
+     * 3. refresh the page, then it should work
+     */
 ?>
