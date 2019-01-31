@@ -69,7 +69,7 @@
                     <p><?php echo wp_trim_words(get_the_content(), 18); // 1st arg = source of words, 2nd arg = how many words? ?><a href="<?php the_permalink(); ?>" class="nu gray">Read more</a></p>
                 </div>
                 </div>
-          <?php  }
+          <?php  } wp_reset_postdata(); // to reset data/global variables everytime we run custom query (always use it after the loop)
          ?>
 
 
